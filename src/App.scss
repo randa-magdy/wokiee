@@ -1,0 +1,16 @@
+@import './helperSass/mixins';
+
+*{
+    @include prefixer(box-sizing , border-box , webkit );
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.padding{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

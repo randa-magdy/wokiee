@@ -1,0 +1,108 @@
+@import '../../../helperSass/variables';
+@import '../../../helperSass/mixins';
+
+
+.wokiee-navbar{
+    padding: 8px 0;
+    position: relative;
+    .w-nav{
+        display: flex;
+        justify-content: space-between;
+        .right-nav{margin-left: -15%;}
+            ul{
+                padding-top: 5px;
+                li{
+                    display: inline;
+                    padding:13px;
+                    padding-bottom: 27px;
+                    &:hover{a{color:$mainColor;}}
+                    .women-toggleItems,.men-toggleItems{
+                        visibility: hidden;
+                        position: absolute;
+                        z-index: 10;
+                        top: 61px;
+                        margin: auto;
+                        padding: 20px 30px;
+                        background-color: #fff;
+                        width: 75%;
+                        box-shadow: 0 -2px 10px #cccccc80;
+                        @include prefixer(transition,all 0.3s ease-in-out , webkit);
+                        li{
+                            display: block;
+                            padding: 0;
+                        }
+                        a{
+                            color: $forthColor;
+                            @include prefixer(transition,color 0.3s ease-in-out, webkit);
+                            &:hover{color:$mainColor;}
+                        }
+                        h6{
+                            color: $thirdColor;
+                            a{
+                                color: $thirdColor;
+                                @include prefixer(transition,color 0.3s ease-in-out, webkit);
+                                &:hover{color:$mainColor;}
+                            }
+                        }
+                
+                        .image{
+                            img{width: 100%;}
+                            margin-bottom: 10px;
+                            margin-top: 5px;
+                        }
+                
+                        .imgBrand{
+                            margin-right: 5px;
+                            img{
+                                background-color: #fff;
+                                border: 1px solid #cccccc80;
+                                padding: 15px;
+                                margin-bottom: 10px;
+                                @include prefixer(transition,border 0.3s ease-in-out, webkit);
+                                &:hover{
+                                    border: 1px solid $forthColor;
+                                }
+                            }
+                        }
+                        .slider-womenNav{
+                            text-align: center;
+                            .carousel-indicators{display: none;}
+                            img{
+                                width: 80%;
+                                height: 100%;
+                            }
+                            a{
+                                font-size: 13px;
+                                font-weight: 600;
+                            }
+                            p{margin: 0;}
+                            span{
+                                font-weight: 700;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    a{
+                        color: $forthColor;
+                        font-size: 14px;
+                        font-weight: 600;
+                        @include prefixer(transition , color 0.3s ease-in-out , webkit moz);
+                        &:hover{
+                            text-decoration: none;
+                            color: $mainColor;
+                        }
+                    }
+                }
+                .women{
+                    &:hover{
+                        .women-toggleItems{visibility: visible;}
+                    }
+                }
+                .men{
+                    &:hover{
+                        .men-toggleItems{visibility: visible;}
+                    }
+                }
+            }
+    }
+}
