@@ -1,0 +1,23 @@
+@import '../../../helperSass/variables';
+
+.wishListProducts{
+    margin: auto;
+    margin-bottom: 50px;
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    .notification{
+        b{
+            font-weight: 500;
+            padding-left: 5px;
+        }
+        b,.fa-exclamation{
+            color: $mainColor;
+        }
+    }
+    .icons{
+        .view,.wish,.compare{display: none;}
+    }
+}

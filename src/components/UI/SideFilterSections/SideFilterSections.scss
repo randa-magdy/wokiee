@@ -1,0 +1,14 @@
+@import '../../../helperSass/variables';
+
+.shoppingBy{
+    ul{
+        li{
+            padding:3px 5px;
+            color: #777777;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    
+    .btn{color:$mainColor}
+}

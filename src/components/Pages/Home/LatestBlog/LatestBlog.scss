@@ -1,0 +1,37 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+.latestBlog{
+    .col-lg-4,.col-md-6{padding-left:8px; padding-right:8px;}
+    .blog{
+        margin-bottom: 50px;
+        .image{
+            margin-bottom: -20%;
+            img{width: 100%;}
+        }
+        .content{
+            background-color: #fff;
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            margin: auto;
+            height: 231px;
+            padding: 25px;
+            border-radius: 7px;
+            a{
+                .sp1{@include prefixer(transition , color 0.3s ease-in-out , webkit);}
+                h5{
+                    color: $secondColor;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    @include prefixer(transition , color 0.3s ease-in-out , webkit);
+                    &:hover{color: $mainColor;}
+                }
+            }
+            p,.sp2{
+                font-size: 13.5px;
+                color: $forthColor;
+            }
+        }
+    }
+}

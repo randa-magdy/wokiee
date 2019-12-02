@@ -1,0 +1,19 @@
+@import '../../../../helperSass/variables';
+
+.details_reviews{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color:$thirdColor;
+    font-size: 14.5px;
+    .buttons{
+        .btn{
+            font-weight: 500;
+            color: $thirdColor;
+            font-size: 17px;
+            &:hover,&:focus{
+                color: $mainColor;
+                box-shadow: none;
+            }
+        }
+    }
+}

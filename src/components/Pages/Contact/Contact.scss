@@ -1,0 +1,53 @@
+@import '../../../helperSass/variables';
+
+.contact{
+    .map{
+        iframe{
+            border: 0px;
+            width: 90%;
+            display: block;
+            margin: 50px auto;
+            min-height: 400px;
+        }
+    }
+    .information{
+        margin-bottom: 50px;
+        .info{
+            margin-bottom: 40px;
+            i{
+                font-size: 2rem;
+                color:$mainColor;
+            }
+            h6{
+                color: $secondColor;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                
+            }
+            span{
+                display: block;
+                color: $thirdColor;
+                font-size: 14px;
+            }
+        }
+    }
+    .contact-from{
+        .form-control{
+            text-align: left;
+            background: #f7f8fa;
+            border: 1px solid #f7f8fa;
+            padding: 11px 12px 10px 15px;
+            &:focus{box-shadow:none}
+        }
+        textarea.form-control {
+            height: 147px;
+        }
+        .blueButton{
+            text-align: center;
+            margin-bottom: 30px;
+            .btn{
+                padding: 12px 20px;
+            }
+        }
+    }
+}

@@ -11,32 +11,32 @@ const Sections = () => {
     return (
         <div className="sections padding">
             <div className="row">
-                <div className="col-lg-3 col-md-6">
-                    <div className="image">
+                <div className="col-lg-3 col-sm-6">
+                    <div className="image im1">
                         <a href="#s" role="button" className="btn">SALE</a>
                         <img src={sale} alt="sections"/>
-                    </div>
-                    <div className="image">
+                    </div> 
+                    <div className="image im2">
                         <a href="#s" role="button" className="btn">NEW</a>
                         <img src={newS} alt="sections"/>
                     </div>
                 </div>
-                <div className="col-lg-3 col-md-6">
-                    <div className="image">
+                <div className="col-lg-3 col-sm-6">
+                    <div className="image im3">
                         <a href="#s" role="button" className="btn">WOMEN</a>
                         <img src={women} alt="sections"/>
-                    </div>
+                    </div> 
                 </div>
                 <div className="col-lg-6 col-md-12">
                     <div className="row">
-                        <div className="col-md-6">
-                            <div className="image">
+                        <div className="col-sm-6">
+                            <div className="image im4">
                                 <a href="#s" role="button" className="btn">MEN</a>
                                 <img src={men} alt="sections"/>
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="image">
+                        <div className="col-sm-6">
+                            <div className="image im5">
                                 <a href="#s" role="button" className="btn">ACCESSORIES</a>
                                 <img src={accessories} alt="sections"/>
                             </div>
@@ -44,7 +44,7 @@ const Sections = () => {
                         </div>
                         <div className="row">
                         <div className="col-12">
-                            <div className="image">
+                            <div className="image im6">
                                 <a href="#s" role="button" className="btn">SHOES</a>
                                 <img src={shoes} alt="sections"/>
                             </div>

@@ -4,11 +4,28 @@
 
 .wokiee-navbar{
     padding: 8px 0;
+    background-color: #fff;
+    width: 100%;
     position: relative;
+    z-index: 555555;
+    @include prefixer(transition, all 0.3s ease-in-out , webkit);
+      
     .w-nav{
-        display: flex;
+        display: flex; 
         justify-content: space-between;
-        .right-nav{margin-left: -15%;}
+        .menubarbutton{
+            color: $thirdColor;
+            display: none;
+            @media (max-width:991.98px) {
+                display: block;
+            }
+        }
+        .left-nav{
+            margin-left: -4%;
+            @media (max-width:991.98px) {
+                display: none;
+            }
+        }
             ul{
                 padding-top: 5px;
                 li{
@@ -31,7 +48,7 @@
                             display: block;
                             padding: 0;
                         }
-                        a{
+                        a,.btn{
                             color: $forthColor;
                             @include prefixer(transition,color 0.3s ease-in-out, webkit);
                             &:hover{color:$mainColor;}
@@ -104,5 +121,70 @@
                     }
                 }
             }
+        .right-nav,.rightNav-smallScreen{
+            
+            .btn{
+                padding: 0;
+            }
+            .openCartSummery{
+                position: relative;
+                
+                .allQuantities{
+                    position: absolute;
+                    top: 7px;
+                    right: -10px;
+                    border-radius: 50%;
+                    background-color: $mainColor;
+                    padding: 1.5px 5px;
+                    color: #fff;
+                    font-size: 11px;
+                    font-weight: 700;
+                    min-width: 20px;
+                }
+            }
+        }
+        .right-nav{
+            @media (max-width:991.98px) {
+                display: none;
+            }
+        }
+        .rightNav-smallScreen{
+            display: none;
+            @media (max-width:991.98px) {
+                display: block;
+            }
+        }
+        .myAccountDropDown{
+            li{
+                display: block;
+                padding: 10px 15px;
+                i{padding-right: 7px;}
+            }
+        }
     }
 }
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+      }
+    100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    }
+  }

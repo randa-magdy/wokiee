@@ -18,7 +18,7 @@
     }
     @-webkit-keyframes slide-in-right {
         0% {
-          -webkit-transform: translateX(1000px);
+          -webkit-transform: translateX(1000px); 
                   transform: translateX(1000px);
           opacity: 0;
         }
@@ -103,6 +103,12 @@
       
     .carousel-caption{
         bottom:20%;
+        @media (min-width:991.98px) {
+          bottom: 12%;
+      }
+      @media (max-width:575.98px) {
+        bottom: 10%;
+     }
     }
     .carousel-control-prev,.carousel-control-next{visibility: hidden;}
     .carousel-indicators{

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import logo from '../../../images/logo.png'
 import './WNavbar.scss'
 import brand1 from '../../../images/brands/brand-img-08.png'
@@ -18,43 +18,66 @@ import m2 from '../../../images/men-navbarItems/header-category-02.jpg'
 import m3 from '../../../images/men-navbarItems/header-category-03.jpg'
 import m4 from '../../../images/men-navbarItems/megamenu_banner_right.jpg'
 import Carousel from 'react-bootstrap/Carousel'
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import * as actionsTypes from '../../../redux/actions/actionsTypes'
+import DropDownToggleNav from './DropDownToggleNav/DropDownToggleNav'
+import SummeryCartNav from './SummeryCartNav/SummeryCartNav'
 
+ 
+const WNavbar =(props)=> {
+    const navRef = useRef(null);
 
-const WNavbar =()=> {
+    
+        const fixedNavbarinScroll=()=>{
+            if(document.body.scrollTop>90 || document.documentElement.scrollTop>90){
+                navRef.current.style.position='fixed';
+                navRef.current.style.boxShadow='0 -2px 10px #CCC';
+                navRef.current.classList.add('slide-bottom');
+            }else{
+                navRef.current.style.position='relative';
+                navRef.current.style.boxShadow='none';
+                navRef.current.classList.remove('slide-bottom');
+            }
+        }
+    
+ 
 
+    window.addEventListener('scroll',fixedNavbarinScroll)
     return (
-        <div className="wokiee-navbar">
+        <div className="wokiee-navbar" ref={navRef} >
             <div className="container">
                 <div className="w-nav">
-                    <div className="image"> <img src={logo} alt="logo" /> </div>
-                    <ul className="list-unstyled right-nav">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT US</a></li>
+                    <button className="btn menubarbutton" onClick={props.openSideNavbar}><i className="fas fa-bars"></i></button>
+                    <div className="image text-center" onClick={props.closeDropDownRightNav}> <img src={logo} alt="logo" /> </div>
+                    <ul className="list-unstyled left-nav" onClick={props.closeDropDownRightNav}>
+                        <li><Link to="/">HOME</Link></li>
+                        <li><Link to="/about">ABOUT US</Link></li>
                         <li className="women">
-                            <a href="#" >WOMEN</a>
+                            <Link to="/women" >WOMEN</Link>
                             <div className="women-toggleItems">
                                     <div className="row">
                                         <div className="col-lg-2">
                                             <h6><a href="#">TOPS</a></h6>
                                             <ul className="list-unstyled">
-                                                {['Jackets','Blouses & Shirts','Dresses','Top & T-shirts','Sleeveless Top','Seaters','Outerwear'].map(itemT=>{
-                                                    return <li  key={itemT}><a href="#">{itemT}</a></li>
+                                                {['Jackets','Blouses','Hoodie','T-shirts','Sweater','Sweatshirt'].map(itemT=>{
+                                                    return <li  key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/women">{itemT}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
                                         <div className="col-lg-2">
                                             <h6><a href="#">BOTTOMS</a></h6>
                                             <ul className="list-unstyled">
-                                                {['Trousers','Jeans','Leggings','Jumpsuit & Shorts','Skirts','Tights'].map(itemB=>{
-                                                    return <li key={itemB}><a href="#">{itemB}</a></li>
+                                                {['Trouser','Jeans','Legging','Short'].map(itemB=>{
+                                                    return <li key={itemB} onClick={()=>props.addToProductType(itemB)} ><Link to="/women">{itemB}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
                                         <div className="col-lg-2">
                                             <h6><a href="#">ACCESSORIES</a></h6>
                                             <ul className="list-unstyled">
-                                                {['Jewellery','Hats','Scarves & Snoods','Belts','Bags','Shoes','Sunglasses'].map(itemA=>{
-                                                    return <li key={itemA}><a href="#">{itemA}</a></li>
+                                                {['Hats','Scarf','Belt','Bag','Shoes','Sunglasses'].map(itemA=>{
+                                                    return <li key={itemA} onClick={()=>props.addToProductType(itemA)} ><Link to="/women">{itemA}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
@@ -100,7 +123,7 @@ const WNavbar =()=> {
                                                     <div className="row">
                                                         <div className="col-6">
                                                             <div className="image"><img src={b3} alt=""/></div>
-                                                            <p><a href="#">Strive Shoulder Pack</a></p>
+                                                            <p><Link to="#">Strive Shoulder Pack</Link></p>
                                                             <span>$54.00</span>
                                                         </div>
                                                         <div className="col-6">
@@ -132,24 +155,24 @@ const WNavbar =()=> {
                             </div>
                         </li>
                         <li className="men">
-                            <a href="#">MEN</a>
+                            <Link to="/men">MEN</Link>
                             <div className="men-toggleItems">
                                 <div className="row">
                                     <div className="col-lg-3">
                                         <h6><a href="#">TOPS</a></h6>
                                         <div className="image"><img src={m1} alt="m1"/></div>
                                         <ul className="list-unstyled">
-                                            {['Jackets','Shirts','Top & T-shirts','Sleeveless Top','Sweaters','Outerwear'].map(itemT=>{
-                                                return <li key={itemT}><a href="#">{itemT}</a></li>
+                                            {['Jacket','T-shirts','Hoodie','Sweater','Sweatshirt'].map(itemT=>{
+                                                return <li key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/men">{itemT}</Link></li>
                                             })}
-                                        </ul>
+                                        </ul> 
                                     </div>
                                     <div className="col-lg-3">
                                         <h6><a href="#">BOTTOMS</a></h6>
                                         <div className="image"><img src={m2} alt="m2"/></div>
                                         <ul className="list-unstyled">
-                                            {['Trousers','Jeans','Jumpsuit & Shorts','Tights'].map(itemB=>{
-                                                return <li key={itemB}><a href="#">{itemB}</a></li>
+                                            {['Trouser','Jeans','Short'].map(itemB=>{
+                                                return <li key={itemB} onClick={()=>props.addToProductType(itemB)}><Link to="/men">{itemB}</Link></li>
                                             })}
                                         </ul>
                                     </div>
@@ -157,10 +180,10 @@ const WNavbar =()=> {
                                         <h6><a href="#">ACCESSORIES</a></h6>
                                         <div className="image"><img src={m3} alt="m3"/></div>
                                         <ul className="list-unstyled">
-                                            {['Jewellery','Hats','Scarves & Snoods','Belts','Bags','Shoes','Sunglasses'].map(itemA=>{
-                                                return <li key={itemA}><a href="#">{itemA}</a></li>
+                                            {['Hats','Scarf','Belt','Bag','Shoes','Sunglasses'].map(itemA=>{
+                                                return <li key={itemA} onClick={()=>props.addToProductType(itemA)}><Link to="/men">{itemA}</Link></li>
                                             })}
-                                        </ul>
+                                        </ul> 
                                     </div>
                                     <div className="col-lg-3">
                                         <a href="#"><img src={m4} alt="m4"/></a>
@@ -169,22 +192,71 @@ const WNavbar =()=> {
                             </div>
 
                         </li>
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">CONTACT US</a></li>
+                        <li><Link to="/services">SERVICES</Link></li>
+                        <li><Link to="#">BLOG</Link></li>
+                        <li><Link to="/faq">FAQ</Link></li> 
+                        <li><Link to="/contact">CONTACT US</Link></li>
                     </ul>
-                    <ul className="list-unstyled">
-                        <li><a href="#"><i className="fas fa-search"></i></a></li>
-                        <li><a href="#"><i className="fas fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i className="far fa-user"></i></a></li>
-                        <li><a href="#"><i className="fas fa-sliders-h"></i></a></li>
+                    <ul className="list-unstyled right-nav">
+                        <li><button className="btn" title="search"><i className="fas fa-search"></i></button></li>
+                        <li className="openCartSummery">
+                            <button className="btn" title="Cart" onClick={props.openCartSummery}><i className="fas fa-shopping-bag"></i>
+                                {props.cartProductsList.length > 0 &&  <span className="allQuantities">{props.cartProductsList.reduce((a,{quantity})=>{ return a + quantity},0)}</span>}
+                            </button>
+                        </li>
+                        <li><button className="btn" title="My Account" onClick={props.openmyAccountDropDown}><i className="far fa-user"></i></button></li>
+                        <li><button className="btn"><i className="fas fa-sliders-h"></i></button></li>
                     </ul>
+                    <ul className="list-unstyled rightNav-smallScreen">
+                        <li><button className="btn" title="search"><i className="fas fa-search"></i></button></li>
+                        <li className="openCartSummery">
+                            <button className="btn" title="Cart" onClick={props.openCartSummerySideNav}><i className="fas fa-shopping-bag"></i>
+                                {props.cartProductsList.length > 0 &&  <span className="allQuantities">{props.cartProductsList.reduce((a,{quantity})=>{ return a + quantity},0)}</span>}
+                            </button>
+                        </li>
+                        <li><button className="btn" title="My Account" onClick={props.openmyAccountSideNav}><i className="far fa-user"></i></button></li>
+                        <li><button className="btn"><i className="fas fa-sliders-h"></i></button></li>
+                    </ul>
+                    <DropDownToggleNav openDropDownRightNav1={props.openDropDownRightNav1} openDropDownRightNav2={props.openDropDownRightNav2}>
+                                {props.openMyCartSumm && <SummeryCartNav /> }
+
+                                {props.openMyAccountList &&
+                                 <ul className="list-unstyled myAccountDropDown">
+                                    <li> <Link to="/signin"> <i className="fas fa-user-lock"></i> Sign In </Link></li>
+                                    <li> <i className="far fa-user"></i> <Link to="/register"> Register </Link></li>
+                                    <li> <i className="fas fa-shopping-bag"></i> <Link to="/cart"> View Cart </Link></li>
+                                    <li> <i className="far fa-heart"></i> <Link to="/wish"> WishList </Link></li>
+                                    <li> <i className="fas fa-balance-scale"></i> <Link to="/compare"> Compare </Link></li>
+                                </ul>
+                                }
+                    </DropDownToggleNav>
                 </div>
             </div>
         </div>
     )
-
 }
 
-export default WNavbar
+const mapStateToProps=(state)=>{
+    return{
+        cartProductsList:state.cartProductsList,
+        openMyAccountList:state.openMyAccountList,
+        openDropDownRightNav1:state.openDropDownRightNav1,
+        openDropDownRightNav2:state.openDropDownRightNav2,
+        openMyCartSumm:state.openMyCartSumm
+    }
+}
+
+
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        openSideNavbar:()=>dispatch({type:actionsTypes.OPEN_SIDENAVBAR}),
+        openCartSummery:()=>dispatch({type:actionsTypes.OPEN_CART_SUMMERY}),
+        openmyAccountDropDown:()=>dispatch({type:actionsTypes.OPEN_MYACCOUNT_DROPDOWN}),
+        openmyAccountSideNav:()=>dispatch({type:actionsTypes.OPEN_MYACCOUNT_SIDENAV}),
+        openCartSummerySideNav:()=>dispatch({type:actionsTypes.OPEN_CART_SUMMERY_SIDENAV}),
+        addToProductType:(name)=>dispatch({type:actionsTypes.ADD_TO_PRODUCT_TYPE_LIST , name:name}),
+        closeDropDownRightNav:()=>dispatch({type:actionsTypes.CLOSE_DROPDOWN_NAV})
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(WNavbar)

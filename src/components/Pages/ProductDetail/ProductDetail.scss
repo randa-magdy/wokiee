@@ -1,0 +1,43 @@
+@import '../../../helperSass/variables';
+ 
+.project-detail{
+    scroll-behavior: smooth;
+    .details{
+        padding-left: 20px;
+        color: $thirdColor;
+       h3{
+           padding-bottom: 5px;
+           color:$mainColor;
+       }
+       .sizes,.colors{padding-bottom: 20px;}
+       .content{font-size: 14px;}
+    }
+
+    .size-shipping{
+        i,span{
+            color:$mainColor;
+            font-size: 13px;
+           }
+           padding-bottom: 15px;
+       }
+   .number-products{
+       display: flex;
+       
+       .addToCartButton{
+           margin-top:2px;
+           .btn{padding: 10px 50px;}
+       }
+   }
+   .AddTo{
+       padding-top: 20px;
+       a,.btn{
+           font-weight: 400;
+           font-size: 14px;
+       }
+       .btn{
+           line-height: 1;
+           color:$mainColor;
+       }
+   }
+}
+ 

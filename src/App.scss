@@ -1,7 +1,25 @@
+@import './helperSass/variables';
 @import './helperSass/mixins';
 
 *{
     @include prefixer(box-sizing , border-box , webkit );
+}
+
+
+@media (min-width: 768px){
+    .container{width: 1250px;}
+}
+
+@media (min-width: 576px) and (max-width:767px){
+    .container {
+        max-width: 700px;
+    }
+}
+
+
+
+.app{
+    overflow-x: hidden;
 }
 
 a{
@@ -11,6 +29,42 @@ a{
 }
 
 .padding{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+.head{
+    margin-bottom: 40px;
+}
+
+.productSize,.productSizeDetails{
+    color: #666;
+    background-color:#cccccc26;
+    font-size: 13px;
+    font-weight: 500;
+    width: fit-content;
+    padding: 3px;
+    margin-top: 7px;
+    display: inline-block;
+    @include prefixer(transition , all 0.3s ease-in-out , webkit);
+    &:not(:last-child){margin-right: 7px;}
+    &:hover{
+        color: #fff;
+        background-color: $mainColor;
+    }
+}
+
+.productSizeDetails{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px;
+}
+.productColor, .productColorDetails{
+    border:1px solid #ccc;
+    border-radius: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    &:not(:last-child){margin-right: 7px;}
+}
+
+.productColorDetails{padding: 15px;}

@@ -1,0 +1,30 @@
+@import '../../../../../helperSass/variables';
+@import '../../../../../helperSass/mixins';
+
+
+.mainNavList{
+    .navw-list{ 
+        ul{
+            overflow-y: hidden;
+            @include prefixer(transition, height 0.3s ease-in-out, webkit); 
+            li{
+                
+                .flex-item{
+                    display: flex;
+                    justify-content:space-between;
+                    cursor: pointer;
+                    &:hover,&:focus{
+                        a,span{color:$mainColor;}
+                    } 
+                }
+            
+                span{
+                    color: #666;
+                    cursor: pointer;
+                    @include prefixer(transition, color 0.3s ease-in-out, webkit);
+                    &:hover{color:$mainColor;}
+                }
+            }
+        }
+    }
+}

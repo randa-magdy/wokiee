@@ -9,12 +9,12 @@ import './Slider.scss'
 
 const Slider = () => {
     return (
-        <div className="slider">
+        <div className="slider"> 
             <Carousel fade='true' >
                 <Carousel.Item>
                     <img className="d-block w-100" src={slide1} alt="First slide" />
                     <Carousel.Caption className="cap1 slide-in-top">
-                      <Caption  p1="Multipurpose" p2="Premium" p3="Magento Theme" p4="30 skins, powerful features, great support, exclusive offer"/>      
+                      <Caption  p1="Multipurpose" p2="Premium" p3="React Theme" p4="30 skins, powerful features, great support, exclusive offer"/>      
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -28,7 +28,7 @@ const Slider = () => {
                 <Carousel.Item>
                     <img className="d-block w-100" src={slide3} alt="Third slide" />
                     <Carousel.Caption className="cap3 slide-in-right">
-                        <Caption  p1="Wokiee" p2="Find Solutions for" p3="Magento Store" p4="More Than a Theme, It's a Powerful Design Tool"/>
+                        <Caption  p1="Wokiee" p2="Find Products for" p3="Your Shop" p4="More Than a Theme, It's a Powerful Design Tool"/>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

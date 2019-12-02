@@ -1,0 +1,15 @@
+@import '../../../helperSass/variables';
+
+.breadcrumb{
+    padding: .5rem 1rem!important;
+    background-color: transparent;
+    li,a{
+        font-weight: 600;
+        font-size: 13px;
+        color:#6c757d ;
+    }
+    .breadcrumb-item.active{color:$mainColor ;}
+}
+.breadcrumb-w{
+    background-color: #e9ecef59;
+}

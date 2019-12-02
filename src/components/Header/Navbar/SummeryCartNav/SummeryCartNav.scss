@@ -1,0 +1,40 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+
+.summeryCartNav{
+    padding: 15px ;
+    .notePragraph{
+        p,i{font-size: 18px;}
+    }
+    img{width: 70px;}
+    .product-cart{
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .agreeCheck{
+        text-align: center;
+        .agreeCondition{
+            font-size: 14px;
+            .btn{
+                color: #fff;
+                padding: 5px 15px;
+                &:hover{color:#fff;}
+            }
+        }
+        .btn{
+            font-size: 14px;
+            color: $mainColor;
+            a{
+                color: $mainColor;
+                font-weight: 400;
+            }
+            @include prefixer(transition , 0.3s all ease-in-out , webkit);
+            &:hover{
+                color: $thirdColor;
+                a{color: $thirdColor;}
+            }
+        }
+    }
+    
+}

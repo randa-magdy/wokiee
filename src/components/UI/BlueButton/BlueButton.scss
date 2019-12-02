@@ -1,0 +1,10 @@
+@import '../../../helperSass/variables';
+.blueButton{
+    .btn{
+        font-size: 14px;
+        margin-top: 20px;
+        font-weight: 600;   
+        background-color: $mainColor;
+        i{font-size: 13px;}
+    }
+}

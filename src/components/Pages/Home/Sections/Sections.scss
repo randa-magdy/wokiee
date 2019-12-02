@@ -1,4 +1,5 @@
 @import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
 
 .sections{
     padding-left: 15px;
@@ -7,10 +8,23 @@
         padding-left: 12px;
         padding-right: 12px;
     }
+
+    .im1,.im2,.im4,.im5{height: 305px;}
+    .im3{height: 629px;}
+    .im6{height: 308px;}
+
     .image{
         width: 100%;
         margin-bottom: 20px;
         position: relative;
+        overflow: hidden;
+        
+        &:hover{
+            img{
+                width: 110% ;
+                 height: 110%;
+                }
+        }
         .btn{
             position: absolute;
             left: 40%;
@@ -24,6 +38,7 @@
         img{
             width: 100%;
             height: 100%;
+            @include prefixer (transition , 0.8s all ease-in-out , webkit);
         }
     }
 }

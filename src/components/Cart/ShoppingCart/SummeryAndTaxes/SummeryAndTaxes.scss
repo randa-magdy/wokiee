@@ -1,0 +1,43 @@
+@import '../../../../helperSass/variables';
+
+.summery-taxes-note{
+    .shipping-tax,.note,.summery{
+        border: 1px solid #e9e7e7;
+        padding: 30px 25px;
+        text-align: left;
+        h5{margin-bottom: 20px;}
+    }
+    .shipping-tax,.note{
+        p{
+            color: #b2aeae;
+            font-size: 14px;
+        }
+        label{
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .form-control{
+            margin-bottom: 30px;
+            background-color: #cccccc2e;
+            text-align: left;
+        }
+        textarea.form-control {
+            height: 233px;
+        }
+        
+    }
+    .summery{
+        p{
+            font-weight: 600;
+            font-size: 15px;
+        }
+        span{
+            font-weight: 600;
+            font-size: 14px;
+        }
+        span.grandTotal{
+            color:$mainColor;
+            font-size: 20px;
+        }
+    }
+}

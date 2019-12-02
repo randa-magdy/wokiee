@@ -1,0 +1,35 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+.side-navbar{
+    transform: translateX(-100vw);
+    background-color: #fff;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 888888888;
+    padding: 20px ;
+    @include prefixer(transition, all 1s ease-in-out, webkit);
+    .close-navbar,.navw-list{padding: 5px 20px;}
+    .close-navbar{
+        color: #666;
+        cursor: pointer;
+    }
+    
+    li{
+        display: block;
+        padding: 10px 15px;
+        i{padding-right: 7px;}
+        a{
+            color: $thirdColor;
+            font-weight: 500;
+            @include prefixer(transition, color 0.3s ease-in-out, webkit); 
+                    &:hover{color: $mainColor;}
+        }
+    }
+
+}

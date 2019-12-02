@@ -1,0 +1,41 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+.advertisement{
+    padding-left: 15px;
+    padding-right: 15px;
+    .get_up,.new-arrival,.new-collection{
+        position: relative;
+        .over{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .content{
+                background-color: #ffffffd1;
+                padding:20px;
+                text-align: center;
+                width: 65%;
+                margin: auto;
+                margin-top: 40%;
+                @include prefixer(transition , all 0.3s ease-in-out , webkit);
+                a{
+                    color: $secondColor;
+                    h4{
+                        span{color: $mainColor;}
+                    }
+                }
+            }
+            &:hover{
+                .content{
+                    padding: 30px;
+                    width: 70%;
+                }
+            }
+        }
+    .image{
+        img{width: 100%;}
+    }
+    }
+}

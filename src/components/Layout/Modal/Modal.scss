@@ -1,0 +1,14 @@
+@import '../../../helperSass/mixins';
+
+body{overflow: auto}
+
+.modal-w{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    z-index: 7777777;
+    @include prefixer(transition , opacity 1s ease-in-out,webkit);
+    opacity: 1;
+    
+}

@@ -1,0 +1,11 @@
+ @import '../../../../../helperSass/variables';
+ 
+ .reviews{
+    .sp-title{color:$mainColor;}
+    form{
+        .form-control:disabled, .form-control[readonly]{
+            background-color: #e9ecef6b;
+        }
+        .form-control{border: 1px solid #ced4da6b;}
+    }
+ }

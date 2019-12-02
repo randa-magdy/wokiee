@@ -1,0 +1,21 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+.services{
+    .service{
+        .icon{
+            font-size: 3rem;
+            color: $mainColor;
+        }
+        .content{
+            padding-left: 20px;
+            a{
+                color:$secondColor;
+                font-weight: 600;
+                @include prefixer(transition , color 0.3s ease-in-out , webkit);
+                &:hover{color:$mainColor;}
+            }
+            span{font-size: 15px;}
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import '../../../helperSass/variables';
+
+.veiwCartCard{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 50px 15px;
+    color: $thirdColor;
+    .closeCard{
+        top: 20px;
+        right:-70px; 
+    }
+
+    .cartCard{
+        background-color: #fff;
+        padding: 30px 15px;
+        h6{color:$mainColor;}
+        .cardSummery-left{
+            margin: 20px 0;
+            border-right: 1px dotted #ccc;
+            @media (max-width:991.98px) {
+                display: none;
+            }
+            img{width: 50%;}
+            span{
+                display: block;
+                padding: 5px 0;
+            }
+        }
+        .cardSummery-right{
+            margin: 20px 0;
+            .total{
+                font-size: 20px;
+                color: $mainColor;
+                b{
+                    color: $secondColor;
+                    font-size: 15px;
+                }
+            }
+            .btn-outline-primary{
+                font-size: 15px;
+                 width: 185px;
+                 &:hover{
+                     a{color: #fff;}
+                 }
+            }
+            .agreeCondition{
+                margin:20px 0;
+                font-size: 14px;
+            }
+        }
+    }
+}

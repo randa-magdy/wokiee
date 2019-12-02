@@ -1,0 +1,43 @@
+@import '../../../../helperSass/variables';
+@import '../../../../helperSass/mixins';
+
+.sideSection{
+    margin-bottom: 30px ;
+    .head-section{
+        display: flex;
+        justify-content: space-between;
+        .btn{line-height: 0} 
+        h6{cursor: pointer;}
+    }
+    .sectionList{
+        //max-height: 300px;
+        overflow: hidden;
+        @include prefixer(transition,all 1s ease-in-out,webkit);
+        ul{
+            li{
+                padding:3px 5px;
+                button{
+                    color: #777777;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                a{
+                    color: #777777;
+                    font-size: 14px;
+                    &:hover,&:focus{color:$mainColor;}
+                }
+                .pColor{
+                    border: 1px solid #ccc;
+                    height: 30px;
+                    width: 30px;
+                    margin-bottom: 10px;
+                    @include prefixer(transition,all 0.3s ease-in-out,webkit);
+                    &:hover{
+                        border: 3px solid $mainColor;
+                    }
+                }
+            }
+        }
+    }
+    
+}

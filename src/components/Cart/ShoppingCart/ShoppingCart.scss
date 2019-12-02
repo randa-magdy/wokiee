@@ -1,0 +1,32 @@
+@import '../../../helperSass/variables';
+
+.shoppingCart{
+    margin: auto;
+    margin-bottom: 50px;
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    
+    .item-cart{
+        color: $thirdColor;
+        img{
+            width: 50%;
+            line-height: 5 
+        }
+    }
+
+    .buttons-cart{
+        margin: 40px 0;
+        .btn{
+            font-size: 14px;
+            color: $mainColor;
+            a{color: $mainColor;}
+            &:hover{
+                color: $thirdColor;
+                a{color: $thirdColor;}
+            }
+        }
+    }
+}

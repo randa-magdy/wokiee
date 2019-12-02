@@ -1,0 +1,15 @@
+
+.productSlider{
+    margin-bottom: 30px;
+    img{width: 100%}
+    .carousel-control-prev,.carousel-control-next{visibility: hidden;}
+    .carousel-indicators{
+        li{
+            width:15px;
+            height: 15px;
+            background-color: #cccccc;
+            border-radius: 100%
+        }
+        .active{background-color: #666666;}
+    }
+}

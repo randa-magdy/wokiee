@@ -1,0 +1,37 @@
+ @import '../../../helperSass/variables';
+ @import '../../../helperSass/mixins';
+
+
+ .foot2{
+     background-color: #f7f8fa;
+     padding-top: 30px;
+     .content{
+         h6{
+             margin-bottom: 15px;
+             font-size: 14px;
+         }
+         
+         li{
+             padding: 5px 0;
+             color: $forthColor;
+             font-size: 14px;
+             span{
+                 padding-right: 5px;
+                 color: $thirdColor;
+                 font-size: 14px;
+                 font-weight: 600;
+                }
+             a{
+                 color: $forthColor;
+                 font-size: 14px;
+                 @include prefixer(transition , color 0.3s ease-in-out , webkit);
+                 &:hover{color: $mainColor;}
+             }
+            }
+         p{
+             line-height: 1.7;
+             color: $forthColor;
+             font-size: 14px;
+            }
+     }
+ }
