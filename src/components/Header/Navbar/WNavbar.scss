@@ -25,6 +25,7 @@
             @media (max-width:991.98px) {
                 display: none;
             }
+            img{width: 100%;}
         }
             ul{
                 padding-top: 5px;
@@ -37,11 +38,12 @@
                         visibility: hidden;
                         position: absolute;
                         z-index: 10;
+                        left: 13%;
                         top: 61px;
                         margin: auto;
                         padding: 20px 30px;
                         background-color: #fff;
-                        width: 75%;
+                        width: 74%;
                         box-shadow: 0 -2px 10px #cccccc80;
                         @include prefixer(transition,all 0.3s ease-in-out , webkit);
                         li{
@@ -75,6 +77,7 @@
                                 border: 1px solid #cccccc80;
                                 padding: 15px;
                                 margin-bottom: 10px;
+                                width: 56px;
                                 @include prefixer(transition,border 0.3s ease-in-out, webkit);
                                 &:hover{
                                     border: 1px solid $forthColor;

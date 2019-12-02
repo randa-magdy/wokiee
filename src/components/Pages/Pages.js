@@ -22,19 +22,19 @@ const Pages = (props) => {
     return (
         <div className="pages" onClick={props.closeDropDownRightNav}>
          <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route path='/about' component={About}/>
-            <Route path='/services' component={Services}/>
-            <Route path='/faq' component={FAQ}/>
-            <Route path='/contact' component={Contact}/>
-            <Route path='/:sectionId/:userId' component={ProductDetail}/>
-            <Route path='/men' component={Men}/>
-            <Route path='/women' component={Women}/>
-            <Route path='/trending' component={Trending}/>
-            <Route path='/bestseller' component={BestSeller}/>
-            <Route path='/compare' component={CompareProducts}/>
-            <Route path='/wish' component={WishListProducts}/>
-            <Route path='/cart' component={ShoppingCart}/>
+            <Route path='/wokiee/' component={Home}/>
+            <Route path='/wokiee/about' component={About}/>
+            <Route path='/wokiee/services' component={Services}/>
+            <Route path='/wokiee/faq' component={FAQ}/>
+            <Route path='/wokiee/contact' component={Contact}/>
+            <Route path='/wokiee/:sectionId/:userId' component={ProductDetail}/>
+            <Route path='/wokiee/men' component={Men}/>
+            <Route path='/wokiee/women' component={Women}/>
+            <Route path='/wokiee/trending' component={Trending}/>
+            <Route path='/wokiee/bestseller' component={BestSeller}/>
+            <Route path='/wokiee/compare' component={CompareProducts}/>
+            <Route path='/wokiee/wish' component={WishListProducts}/>
+            <Route path='/wokiee/cart' component={ShoppingCart}/>
         </Switch>
         </div> 
     )

@@ -51,38 +51,38 @@ const WNavbar =(props)=> {
                     <button className="btn menubarbutton" onClick={props.openSideNavbar}><i className="fas fa-bars"></i></button>
                     <div className="image text-center" onClick={props.closeDropDownRightNav}> <img src={logo} alt="logo" /> </div>
                     <ul className="list-unstyled left-nav" onClick={props.closeDropDownRightNav}>
-                        <li><Link to="/">HOME</Link></li>
-                        <li><Link to="/about">ABOUT US</Link></li>
+                        <li><Link to="/wokiee/">HOME</Link></li>
+                        <li><Link to="/wokiee/about">ABOUT US</Link></li>
                         <li className="women">
-                            <Link to="/women" >WOMEN</Link>
+                            <Link to="/wokiee/women" >WOMEN</Link>
                             <div className="women-toggleItems">
                                     <div className="row">
                                         <div className="col-lg-2">
-                                            <h6><a href="#">TOPS</a></h6>
+                                            <h6><a href="/wokiee/#">TOPS</a></h6>
                                             <ul className="list-unstyled">
                                                 {['Jackets','Blouses','Hoodie','T-shirts','Sweater','Sweatshirt'].map(itemT=>{
-                                                    return <li  key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/women">{itemT}</Link></li>
+                                                    return <li  key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/wokiee/women">{itemT}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
                                         <div className="col-lg-2">
-                                            <h6><a href="#">BOTTOMS</a></h6>
+                                            <h6><a href="/wokiee/#">BOTTOMS</a></h6>
                                             <ul className="list-unstyled">
                                                 {['Trouser','Jeans','Legging','Short'].map(itemB=>{
-                                                    return <li key={itemB} onClick={()=>props.addToProductType(itemB)} ><Link to="/women">{itemB}</Link></li>
+                                                    return <li key={itemB} onClick={()=>props.addToProductType(itemB)} ><Link to="/wokiee/women">{itemB}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
                                         <div className="col-lg-2">
-                                            <h6><a href="#">ACCESSORIES</a></h6>
+                                            <h6><a href="/wokiee/#">ACCESSORIES</a></h6>
                                             <ul className="list-unstyled">
                                                 {['Hats','Scarf','Belt','Bag','Shoes','Sunglasses'].map(itemA=>{
-                                                    return <li key={itemA} onClick={()=>props.addToProductType(itemA)} ><Link to="/women">{itemA}</Link></li>
+                                                    return <li key={itemA} onClick={()=>props.addToProductType(itemA)} ><Link to="/wokiee/women">{itemA}</Link></li>
                                                 })}
                                             </ul>
                                         </div>
                                         <div className="col-lg-2">
-                                            <h6><a href="#">TOP BRANDS</a></h6>
+                                            <h6><a href="/wokiee/#">TOP BRANDS</a></h6>
                                             <div className="row">
                                                 <div className="col-lg-6">
                                                     <div className="imgBrand">
@@ -108,12 +108,12 @@ const WNavbar =(props)=> {
                                                     <div className="row">
                                                         <div className="col-6">
                                                             <div className="image"><img src={b1} alt=""/></div>
-                                                            <p><a href="#">Joust Duffle Bag</a></p>
+                                                            <p><a href="/wokiee/#">Joust Duffle Bag</a></p>
                                                             <span>$34.00</span>
                                                         </div>
                                                         <div className="col-6">
                                                             <div className="image"><img src={b2} alt=""/></div>
-                                                            <p><a href="#">Crown Summit Backpack</a></p>
+                                                            <p><a href="/wokiee/#">Crown Summit Backpack</a></p>
                                                             <span>$38.00</span>
                                                         </div>
                                                     </div>
@@ -123,12 +123,12 @@ const WNavbar =(props)=> {
                                                     <div className="row">
                                                         <div className="col-6">
                                                             <div className="image"><img src={b3} alt=""/></div>
-                                                            <p><Link to="#">Strive Shoulder Pack</Link></p>
+                                                            <p><Link to="/wokiee/#">Strive Shoulder Pack</Link></p>
                                                             <span>$54.00</span>
                                                         </div>
                                                         <div className="col-6">
                                                             <div className="image"><img src={b4} alt=""/></div>
-                                                            <p><a href="#">Wayfarer Messenger Bag</a></p>
+                                                            <p><a href="/wokiee/#">Wayfarer Messenger Bag</a></p>
                                                             <span>$45.00</span>
                                                         </div>
                                                     </div>
@@ -138,12 +138,12 @@ const WNavbar =(props)=> {
                                                     <div className="row">
                                                         <div className="col-6">
                                                             <div className="image"><img src={b5} alt=""/></div>
-                                                            <p><a href="#">Rival Field Messenger</a></p>
+                                                            <p><a href="/wokiee/#">Rival Field Messenger</a></p>
                                                             <span>$45.00</span>
                                                         </div>
                                                         <div className="col-6">
                                                             <div className="image"><img src={b6} alt=""/></div>
-                                                            <p><a href="#">Fusion Backpack</a></p>
+                                                            <p><a href="/wokiee/#">Fusion Backpack</a></p>
                                                             <span>$59.00</span>
                                                         </div>
                                                     </div>
@@ -155,47 +155,47 @@ const WNavbar =(props)=> {
                             </div>
                         </li>
                         <li className="men">
-                            <Link to="/men">MEN</Link>
+                            <Link to="/wokiee/men">MEN</Link>
                             <div className="men-toggleItems">
                                 <div className="row">
                                     <div className="col-lg-3">
-                                        <h6><a href="#">TOPS</a></h6>
+                                        <h6><a href="/wokiee/#">TOPS</a></h6>
                                         <div className="image"><img src={m1} alt="m1"/></div>
                                         <ul className="list-unstyled">
                                             {['Jacket','T-shirts','Hoodie','Sweater','Sweatshirt'].map(itemT=>{
-                                                return <li key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/men">{itemT}</Link></li>
+                                                return <li key={itemT} onClick={()=>props.addToProductType(itemT)}><Link to="/wokiee/men">{itemT}</Link></li>
                                             })}
                                         </ul> 
                                     </div>
                                     <div className="col-lg-3">
-                                        <h6><a href="#">BOTTOMS</a></h6>
+                                        <h6><a href="/wokiee/#">BOTTOMS</a></h6>
                                         <div className="image"><img src={m2} alt="m2"/></div>
                                         <ul className="list-unstyled">
                                             {['Trouser','Jeans','Short'].map(itemB=>{
-                                                return <li key={itemB} onClick={()=>props.addToProductType(itemB)}><Link to="/men">{itemB}</Link></li>
+                                                return <li key={itemB} onClick={()=>props.addToProductType(itemB)}><Link to="/wokiee/men">{itemB}</Link></li>
                                             })}
                                         </ul>
                                     </div>
                                     <div className="col-lg-3">
-                                        <h6><a href="#">ACCESSORIES</a></h6>
+                                        <h6><a href="/wokiee/#">ACCESSORIES</a></h6>
                                         <div className="image"><img src={m3} alt="m3"/></div>
                                         <ul className="list-unstyled">
                                             {['Hats','Scarf','Belt','Bag','Shoes','Sunglasses'].map(itemA=>{
-                                                return <li key={itemA} onClick={()=>props.addToProductType(itemA)}><Link to="/men">{itemA}</Link></li>
+                                                return <li key={itemA} onClick={()=>props.addToProductType(itemA)}><Link to="/wokiee/men">{itemA}</Link></li>
                                             })}
                                         </ul> 
                                     </div>
                                     <div className="col-lg-3">
-                                        <a href="#"><img src={m4} alt="m4"/></a>
+                                        <a href="/wokiee/#"><img src={m4} alt="m4"/></a>
                                     </div>
                                 </div>
                             </div>
 
                         </li>
-                        <li><Link to="/services">SERVICES</Link></li>
-                        <li><Link to="#">BLOG</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li> 
-                        <li><Link to="/contact">CONTACT US</Link></li>
+                        <li><Link to="/wokiee/services">SERVICES</Link></li>
+                        <li><Link to="/wokiee/#">BLOG</Link></li>
+                        <li><Link to="/wokiee/faq">FAQ</Link></li> 
+                        <li><Link to="/wokiee/contact">CONTACT US</Link></li>
                     </ul>
                     <ul className="list-unstyled right-nav">
                         <li><button className="btn" title="search"><i className="fas fa-search"></i></button></li>
@@ -222,11 +222,11 @@ const WNavbar =(props)=> {
 
                                 {props.openMyAccountList &&
                                  <ul className="list-unstyled myAccountDropDown">
-                                    <li> <Link to="/signin"> <i className="fas fa-user-lock"></i> Sign In </Link></li>
-                                    <li> <i className="far fa-user"></i> <Link to="/register"> Register </Link></li>
-                                    <li> <i className="fas fa-shopping-bag"></i> <Link to="/cart"> View Cart </Link></li>
-                                    <li> <i className="far fa-heart"></i> <Link to="/wish"> WishList </Link></li>
-                                    <li> <i className="fas fa-balance-scale"></i> <Link to="/compare"> Compare </Link></li>
+                                    <li> <Link to="/wokiee/signin"> <i className="fas fa-user-lock"></i> Sign In </Link></li>
+                                    <li> <i className="far fa-user"></i> <Link to="/wokiee/register"> Register </Link></li>
+                                    <li> <i className="fas fa-shopping-bag"></i> <Link to="/wokiee/cart"> View Cart </Link></li>
+                                    <li> <i className="far fa-heart"></i> <Link to="/wokiee/wish"> WishList </Link></li>
+                                    <li> <i className="fas fa-balance-scale"></i> <Link to="/wokiee/compare"> Compare </Link></li>
                                 </ul>
                                 }
                     </DropDownToggleNav>
