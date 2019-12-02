@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "473b7f96e4971a1baead9fdcb55822e4",
+    "revision": "9288c2559408bd86e6705e01d95d4ab6",
     "url": "/wokiee/index.html"
   },
   {
-    "revision": "ad2f16e7b9263f68ebdd",
+    "revision": "c10e5585a74395058a0a",
     "url": "/wokiee/static/css/2.1c5c90a3.chunk.css"
   },
   {
-    "revision": "a47e203d062bd7cb951f",
+    "revision": "cb0838e5d15aab202afe",
     "url": "/wokiee/static/css/main.6a8dc30a.chunk.css"
   },
   {
-    "revision": "ad2f16e7b9263f68ebdd",
-    "url": "/wokiee/static/js/2.9c834f4a.chunk.js"
+    "revision": "c10e5585a74395058a0a",
+    "url": "/wokiee/static/js/2.f86f20de.chunk.js"
   },
   {
-    "revision": "a47e203d062bd7cb951f",
-    "url": "/wokiee/static/js/main.c023771e.chunk.js"
+    "revision": "cb0838e5d15aab202afe",
+    "url": "/wokiee/static/js/main.02a06cde.chunk.js"
   },
   {
     "revision": "80b71c67ae5074c483cf",
