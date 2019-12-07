@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e39d847ebd3adaa6c6182252f8b0165",
+    "revision": "4564a256d53c2889e2d3989aea67b47c",
     "url": "/wokiee/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wokiee/static/css/2.1c5c90a3.chunk.css"
   },
   {
-    "revision": "e0eb3c7cf7b302fce317",
-    "url": "/wokiee/static/css/main.6b02a603.chunk.css"
+    "revision": "c5a056495764e730c87a",
+    "url": "/wokiee/static/css/main.a1703ae2.chunk.css"
   },
   {
     "revision": "c10e5585a74395058a0a",
     "url": "/wokiee/static/js/2.f86f20de.chunk.js"
   },
   {
-    "revision": "e0eb3c7cf7b302fce317",
+    "revision": "c5a056495764e730c87a",
     "url": "/wokiee/static/js/main.d056d50e.chunk.js"
   },
   {
