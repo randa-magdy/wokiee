@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {BrowserRouter} from 'react-router-dom'
+import {HashRouter} from 'react-router-dom'
 import Navbar from './components/Header/Navbar/WNavbar'
 import Pages from './components/Pages/Pages'
 import Footer from './components/Footer/Footer'
@@ -31,14 +31,14 @@ const App =(props)=>{
   
     return (
       <div className="app">
-        <BrowserRouter>
+        <HashRouter>
           {props.openSideNavB1 || props.openSideNavB2 || props.openSideNavB3 || props.openSideNavB4 ? <Modal> <SideNavbar/> </Modal> : null}
           {props.viewDetailsCard ? <Modal> <ViewProductDetailsCard /> </Modal> : null}
           {props.viewCartCard ? <Modal> <ViewCartCard /> </Modal> : null}
           <Navbar/>
           <Pages/>
           <Footer/>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     )  
   } 

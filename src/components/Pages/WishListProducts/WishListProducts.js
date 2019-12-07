@@ -21,11 +21,11 @@ const WishListProducts = (props) => {
                 :
                 <div className="wishListProducts">
                     <div className="row">  
-                        {
+                        { 
                             props.wishProductsList.map((wproduct,id)=>{
                                 return <div className="col-lg-3 col-md-4 col-6">
                                             <ItemCard key={Math.random()} titleP={wproduct.title} priceP={wproduct.price} imgP1={wproduct.image} 
-                                                    sizesP={wproduct.sizes} colorsP={wproduct.colors} >
+                                                    sizesP={wproduct.sizes} colorsP={wproduct.colors} indexP={props.itemId} sectionName={props.sectionNameId}>
                                                         <button className="btn closeP" onClick={()=>props.removeItemFromWish(id)}><i className="far fa-trash-alt"></i></button>
                                             </ItemCard>
                                         </div>
@@ -41,7 +41,9 @@ const WishListProducts = (props) => {
 
 const mapStateToProps=(state)=>{
     return{
-        wishProductsList:state.wishProductsList
+        wishProductsList:state.wishProductsList,
+        itemId:state.itemId,
+        sectionNameId:state.sectionNameId
     }
 }
 

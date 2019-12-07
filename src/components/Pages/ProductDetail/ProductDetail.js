@@ -56,7 +56,7 @@ const bItems=[{name:'Home',path:'/'},{name:props.match.params.sectionId , path:'
                     </div>
                     <div className="col-md-6">
                         <div className="details">
-                            <h3>{itemData.title}</h3>
+                            <h3>{itemData.title}</h3> 
                             
                             <p className="price"><b>Price : </b> $ {itemData.price}</p>        
                             

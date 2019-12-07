@@ -159,7 +159,9 @@ const reducer =(state=initialState,action)=>{
                 category:action.category,
                 sectionProducts:action.section,
                 quantityProduct:action.quantity,
-                totalPriceProduct:action.totalPrice
+                totalPriceProduct:action.totalPrice,
+                sectionNameId:action.sectionName,
+                itemId:action.index
             }
         case actionTypes.VIEW_PDETAILS_CARD:
             return{

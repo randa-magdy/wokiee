@@ -57,7 +57,7 @@ const ProductsPage = (props) => {
                 </div>  
                 
     })*/
-
+ 
     let mapProducts=props.categoryProductsArray && props.categoryProductsArray.map((item,id)=>{
                                     
         const productColor = props.colorsNameList.length >0 ? props.colorsNameList.map(pColor=>{return item.colors.includes(pColor)}).reduce((a,b)=>{return a || b}) :true

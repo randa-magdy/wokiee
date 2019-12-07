@@ -31,7 +31,7 @@ const ViewCartCard = (props) => {
                             <br/>
                             <span className="total"><b>TOTAL : </b> $ {props.cartProductsList.length > 0 && props.cartProductsList.reduce((b,{totalPrice})=>{ return b + totalPrice},0).toFixed(2)}</span>
                             <WhiteButton> <Link to="/"> CONTINUE SHOPPING </Link></WhiteButton>
-                            <WhiteButton><Link to='/details' className="goToPage" onClick={props.closeProductCard}>GO TO DETAILS</Link></WhiteButton>
+                            <WhiteButton><Link to={'/'+ props.sectionNameId + '/' + props.itemId} className="goToPage" onClick={props.closeProductCard}>GO TO DETAILS</Link></WhiteButton>
                             <WhiteButton> <Link to="/cart" onClick={props.closeProductCard}>VIEW CART </Link></WhiteButton>
                             <AgreeCondition Check={props.clickCheckCard}/>
                         </div>

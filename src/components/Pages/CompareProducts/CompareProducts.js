@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom'
 const CompareProducts = (props) => {
 
     const bItems=[{name:'Home',path:'/'}]; 
-
+  
     return (
         <div className="compareProducts">
             <Breadcrumb breadcrumbItems={bItems} breadcrumbActive="Compare" />
@@ -30,7 +30,7 @@ const CompareProducts = (props) => {
                                                     <div className="product">
                                                         <button className="btn closeP" onClick={()=>props.removeItem(index)}><i className="far fa-trash-alt"></i> Remove</button>
                                                         <img src={product.image} alt={product.title}/>
-                                                        <p className="title"><Link to="/details" >{product.title}</Link></p>
+                                                        <p className="title"><Link to={'/'+ props.sectionNameId + '/' + props.itemId} >{product.title}</Link></p>
                                                         <span><b>SKU : </b> {product.sku}</span>
                                                         {props.includeSkuCart.includes(product.sku) ?
                                                             <InCartButton />
@@ -82,7 +82,9 @@ const CompareProducts = (props) => {
 const mapStateToProps=(state)=>{
     return{ 
         compareProductsList:state.compareProductsList,
-        includeSkuCart:state.includeSkuCart
+        includeSkuCart:state.includeSkuCart,
+        itemId:state.itemId,
+        sectionNameId:state.sectionNameId,
     }
 }
 

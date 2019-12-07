@@ -8,9 +8,9 @@ import * as actionsTypes from '../../../redux/actions/actionsTypes'
 
 
 const ItemCard = (props) => {
-   
+    
     return ( 
-        <div className="item-card text-center" onClick={()=>props.sendDataToDetailsP(props.indexP,props.categoryP,props.sectionP,props.quantityP,props.totalPriceP)}>
+        <div className="item-card text-center" onClick={()=>props.sendDataToDetailsP(props.indexP,props.categoryP,props.sectionP,props.quantityP,props.totalPriceP,props.sectionName)}>
             <div className="itm-ItemCard" >
                 <div className="image"><img src={props.imgP1} alt=""/></div>
                 <div className="content">
@@ -61,7 +61,7 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return{
-        sendDataToDetailsP:(index,category,section,quantity,totalPrice)=>dispatch({type:actionsTypes.SEND_DETAILS_DATA, index:index ,category:category ,section:section , quantity:quantity , totalPrice:totalPrice}),
+        sendDataToDetailsP:(index,category,section,quantity,totalPrice,sectionName)=>dispatch({type:actionsTypes.SEND_DETAILS_DATA, index:index ,category:category ,section:section , quantity:quantity , totalPrice:totalPrice,sectionName:sectionName}),
         viewProductCard:()=>dispatch({type:actionsTypes.VIEW_PDETAILS_CARD}),
         addToCompare:(img,title,content,price,sku,quantity,totalPrice)=>dispatch({type:actionsTypes.ADD_TO_COMPARE,image:img,title:title,content:content,sku:sku,price:price,quantity:quantity,totalPrice:totalPrice }),
         addToWishList:(img,title,price,sizes,colors,sku)=>dispatch({type:actionsTypes.ADD_TO_WISHLIST,image:img,title:title,sizes:sizes,colors:colors,sku:sku,price:price })
