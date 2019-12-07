@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wokiee/static/css/main.6a8dc30a.chunk.css",
+    "main.css": "/wokiee/static/css/main.6b02a603.chunk.css",
     "main.js": "/wokiee/static/js/main.d056d50e.chunk.js",
     "main.js.map": "/wokiee/static/js/main.d056d50e.chunk.js.map",
     "runtime~main.js": "/wokiee/static/js/runtime~main.ed4fe2f4.js",
@@ -9,10 +9,10 @@
     "static/js/2.f86f20de.chunk.js": "/wokiee/static/js/2.f86f20de.chunk.js",
     "static/js/2.f86f20de.chunk.js.map": "/wokiee/static/js/2.f86f20de.chunk.js.map",
     "index.html": "/wokiee/index.html",
-    "precache-manifest.694e8cf42a67c3e81f4bc735e39d39ee.js": "/wokiee/precache-manifest.694e8cf42a67c3e81f4bc735e39d39ee.js",
+    "precache-manifest.0043b24c295544486cc6dd9b572a287a.js": "/wokiee/precache-manifest.0043b24c295544486cc6dd9b572a287a.js",
     "service-worker.js": "/wokiee/service-worker.js",
     "static/css/2.1c5c90a3.chunk.css.map": "/wokiee/static/css/2.1c5c90a3.chunk.css.map",
-    "static/css/main.6a8dc30a.chunk.css.map": "/wokiee/static/css/main.6a8dc30a.chunk.css.map",
+    "static/css/main.6b02a603.chunk.css.map": "/wokiee/static/css/main.6b02a603.chunk.css.map",
     "static/media/About.scss": "/wokiee/static/media/about.238aa715.png",
     "static/media/b1.jpg": "/wokiee/static/media/b1.9655b547.jpg",
     "static/media/b4.jpg": "/wokiee/static/media/b4.97a589a8.jpg",
